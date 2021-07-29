@@ -1,0 +1,40 @@
+@import "../colors/index";
+
+$font-family--text: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family--title: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family--number: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$line-height--default: 1.5em !default;
+
+$font--size: 1rem !default;
+
+$font-weight--light: 300 !default;
+$font-weight--default: 400 !default;
+$font-weight--title: 500 !default;
+$font-weight--bold: 700 !default;
+
+// Paragraph
+$paragraph--margin-bottom: 0rem !default;
+$paragraph--font-size--highlight-factor: 1.25 !default;
+
+// Headings
+$head--color: darken($color-light--default, 20%) !default;
+$head--line-height: 1.2 !default;
+$head--margin-bottom: 0rem !default;
+$head--font-size--base: 1 * $font--size !default;
+$head--font-size--increment: 0.25rem !default;
+$head--font-weight: $font-weight--title !default;
+
+$head--font-size--lg-factor: 1.5 !default;
+$head--font-weight--lg: $font-weight--light !default;
+
+$head--font-size--sm-factor: 0.5 !default;
+$head--font-weight--sm: $font-weight--bold !default;
+
+// Body
+$body--bg-color: $color-light !default;
+$body--color: $color-light--default !default;

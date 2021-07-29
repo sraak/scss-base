@@ -1,0 +1,210 @@
+@import './theme';
+@import './functions';
+
+// Social Colours
+$color-facebook: #1877f2;
+$color-facebook-contrast: choose-contrast-color($color-facebook, $color-light--default, $color-dark--default);
+$color-facebookold: #3b5998;
+$color-facebookold-contrast: choose-contrast-color($color-facebookold, $color-light--default, $color-dark--default);
+$color-twitter: #1da1f2;
+$color-twitter-contrast: choose-contrast-color($color-twitter, $color-light--default, $color-dark--default);
+$color-youtube: #ff0000;
+$color-youtube-contrast: choose-contrast-color($color-youtube, $color-light--default, $color-dark--default);
+$color-instagrammagenta: #c32aa3;
+$color-instagrammagenta-contrast: choose-contrast-color(
+  $color-instagrammagenta,
+  $color-light--default,
+  $color-dark--default
+);
+$color-instagramblue: #4c5fd7;
+$color-instagramblue-contrast: choose-contrast-color($color-instagramblue, $color-light--default, $color-dark--default);
+$color-instagrampurple: #7232bd;
+$color-instagrampurple-contrast: choose-contrast-color(
+  $color-instagrampurple,
+  $color-light--default,
+  $color-dark--default
+);
+$color-instagramorange: #f46f30;
+$color-instagramorange-contrast: choose-contrast-color(
+  $color-instagramorange,
+  $color-light--default,
+  $color-dark--default
+);
+$color-instagramyellow: #ffdc7d;
+$color-instagramyellow-contrast: choose-contrast-color(
+  $color-instagramyellow,
+  $color-light--default,
+  $color-dark--default
+);
+$color-googleblue: #4285f4;
+$color-googleblue-contrast: choose-contrast-color($color-googleblue, $color-light--default, $color-dark--default);
+$color-googlered: #ea4335;
+$color-googlered-contrast: choose-contrast-color($color-googlered, $color-light--default, $color-dark--default);
+$color-googleyellow: #fbbc05;
+$color-googleyellow-contrast: choose-contrast-color($color-googleyellow, $color-light--default, $color-dark--default);
+$color-googlegreen: #34a853;
+$color-googlegreen-contrast: choose-contrast-color($color-googlegreen, $color-light--default, $color-dark--default);
+$color-pinterest: #bd081c;
+$color-pinterest-contrast: choose-contrast-color($color-pinterest, $color-light--default, $color-dark--default);
+$color-googleplus: #db4437;
+$color-googleplus-contrast: choose-contrast-color($color-googleplus, $color-light--default, $color-dark--default);
+$color-linkedin: #0a66c2;
+$color-linkedin-contrast: choose-contrast-color($color-linkedin, $color-light--default, $color-dark--default);
+$color-vimeoblue: #1ab7ea;
+$color-vimeoblue-contrast: choose-contrast-color($color-vimeoblue, $color-light--default, $color-dark--default);
+$color-tumblr: #2c4762;
+$color-tumblr-contrast: choose-contrast-color($color-tumblr, $color-light--default, $color-dark--default);
+$color-snapchat: #fffc00;
+$color-snapchat-contrast: choose-contrast-color($color-snapchat, $color-light--default, $color-dark--default);
+$color-whatsappgreen: #25d366;
+$color-whatsappgreen-contrast: choose-contrast-color($color-whatsappgreen, $color-light--default, $color-dark--default);
+$color-whatsappteal1: #075e54;
+$color-whatsappteal1-contrast: choose-contrast-color($color-whatsappteal1, $color-light--default, $color-dark--default);
+$color-whatsappteal2: #128c7e;
+$color-whatsappteal2-contrast: choose-contrast-color($color-whatsappteal2, $color-light--default, $color-dark--default);
+$color-tiktokblack: #010101;
+$color-tiktokblack-contrast: choose-contrast-color($color-tiktokblack, $color-light--default, $color-dark--default);
+$color-tiktookblue: #69c9d0;
+$color-tiktookblue-contrast: choose-contrast-color($color-tiktookblue, $color-light--default, $color-dark--default);
+$color-tiktokpink: #ee1d52;
+$color-tiktokpink-contrast: choose-contrast-color($color-tiktokpink, $color-light--default, $color-dark--default);
+$color-tiktokwhite: #fff;
+$color-tiktokwhite-contrast: choose-contrast-color($color-tiktokwhite, $color-light--default, $color-dark--default);
+$color-mastodon: #2b90d9;
+$color-mastodon-contrast: choose-contrast-color($color-mastodon, $color-light--default, $color-dark--default);
+$color-apple: #a6b1b7;
+$color-apple-contrast: choose-contrast-color($color-apple, $color-light--default, $color-dark--default);
+$color-amazon: #ff9900;
+$color-amazon-contrast: choose-contrast-color($color-amazon, $color-light--default, $color-dark--default);
+$color-alexablue: #00a7ce;
+$color-alexablue-contrast: choose-contrast-color($color-alexablue, $color-light--default, $color-dark--default);
+$color-alexadkblue: #232f3e;
+$color-alexadkblue-contrast: choose-contrast-color($color-alexadkblue, $color-light--default, $color-dark--default);
+$color-microsoftred: #f35022;
+$color-microsoftred-contrast: choose-contrast-color($color-microsoftred, $color-light--default, $color-dark--default);
+$color-microsoftgreen: #80bb03;
+$color-microsoftgreen-contrast: choose-contrast-color(
+  $color-microsoftgreen,
+  $color-light--default,
+  $color-dark--default
+);
+$color-microsoftblue: #03a5f0;
+$color-microsoftblue-contrast: choose-contrast-color($color-microsoftblue, $color-light--default, $color-dark--default);
+$color-microsoftyellow: #ffb903;
+$color-microsoftyellow-contrast: choose-contrast-color(
+  $color-microsoftyellow,
+  $color-light--default,
+  $color-dark--default
+);
+$color-periscope: #40a4c4;
+$color-periscope-contrast: choose-contrast-color($color-periscope, $color-light--default, $color-dark--default);
+$color-foursquarepink: #f94877;
+$color-foursquarepink-contrast: choose-contrast-color(
+  $color-foursquarepink,
+  $color-light--default,
+  $color-dark--default
+);
+$color-foursquarenavy: #073282;
+$color-foursquarenavy-contrast: choose-contrast-color(
+  $color-foursquarenavy,
+  $color-light--default,
+  $color-dark--default
+);
+$color-foursquareblue: #2d5be3;
+$color-foursquareblue-contrast: choose-contrast-color(
+  $color-foursquareblue,
+  $color-light--default,
+  $color-dark--default
+);
+$color-yelp: #d32323;
+$color-yelp-contrast: choose-contrast-color($color-yelp, $color-light--default, $color-dark--default);
+$color-swarm: #ffa633;
+$color-swarm-contrast: choose-contrast-color($color-swarm, $color-light--default, $color-dark--default);
+$color-medium: #02b875;
+$color-medium-contrast: choose-contrast-color($color-medium, $color-light--default, $color-dark--default);
+$color-skypeblue: #00aff0;
+$color-skypeblue-contrast: choose-contrast-color($color-skypeblue, $color-light--default, $color-dark--default);
+$color-skypedkblue: #0078d7;
+$color-skypedkblue-contrast: choose-contrast-color($color-skypedkblue, $color-light--default, $color-dark--default);
+$color-android: #a4c639;
+$color-android-contrast: choose-contrast-color($color-android, $color-light--default, $color-dark--default);
+$color-stumbleupon: #e94826;
+$color-stumbleupon-contrast: choose-contrast-color($color-stumbleupon, $color-light--default, $color-dark--default);
+$color-flickrpink: #f40083;
+$color-flickrpink-contrast: choose-contrast-color($color-flickrpink, $color-light--default, $color-dark--default);
+$color-flickrblue: #006add;
+$color-flickrblue-contrast: choose-contrast-color($color-flickrblue, $color-light--default, $color-dark--default);
+$color-yahoo: #430297;
+$color-yahoo-contrast: choose-contrast-color($color-yahoo, $color-light--default, $color-dark--default);
+$color-twitch: #9146ff;
+$color-twitch-contrast: choose-contrast-color($color-twitch, $color-light--default, $color-dark--default);
+$color-soundcloud: #ff5500;
+$color-soundcloud-contrast: choose-contrast-color($color-soundcloud, $color-light--default, $color-dark--default);
+$color-spotifygreen: #1ed760;
+$color-spotifygreen-contrast: choose-contrast-color($color-spotifygreen, $color-light--default, $color-dark--default);
+$color-spotifydarkgreen: #1db954;
+$color-spotifydarkgreen-contrast: choose-contrast-color(
+  $color-spotifydarkgreen,
+  $color-light--default,
+  $color-dark--default
+);
+$color-dribbble: #ea4c89;
+$color-dribbble-contrast: choose-contrast-color($color-dribbble, $color-light--default, $color-dark--default);
+$color-slackpurple: #4a154b;
+$color-slackpurple-contrast: choose-contrast-color($color-slackpurple, $color-light--default, $color-dark--default);
+$color-slackblue: #36c5f0;
+$color-slackblue-contrast: choose-contrast-color($color-slackblue, $color-light--default, $color-dark--default);
+$color-slackgreen: #2eb67d;
+$color-slackgreen-contrast: choose-contrast-color($color-slackgreen, $color-light--default, $color-dark--default);
+$color-slackred: #e01e5a;
+$color-slackred-contrast: choose-contrast-color($color-slackred, $color-light--default, $color-dark--default);
+$color-slackyellow: #ecb22e;
+$color-slackyellow-contrast: choose-contrast-color($color-slackyellow, $color-light--default, $color-dark--default);
+$color-reddit: #ff5700;
+$color-reddit-contrast: choose-contrast-color($color-reddit, $color-light--default, $color-dark--default);
+$color-deviantart: #05cc47;
+$color-deviantart-contrast: choose-contrast-color($color-deviantart, $color-light--default, $color-dark--default);
+$color-pocket: #ee4056;
+$color-pocket-contrast: choose-contrast-color($color-pocket, $color-light--default, $color-dark--default);
+$color-quora: #aa2200;
+$color-quora-contrast: choose-contrast-color($color-quora, $color-light--default, $color-dark--default);
+$color-quorablue: #2b6dad;
+$color-quorablue-contrast: choose-contrast-color($color-quorablue, $color-light--default, $color-dark--default);
+$color-slideshareorange: #e68523;
+$color-slideshareorange-contrast: choose-contrast-color(
+  $color-slideshareorange,
+  $color-light--default,
+  $color-dark--default
+);
+$color-slideshareblue: #00a0dc;
+$color-slideshareblue-contrast: choose-contrast-color(
+  $color-slideshareblue,
+  $color-light--default,
+  $color-dark--default
+);
+$color-fivehundredpx: #0099e5;
+$color-fivehundredpx-contrast: choose-contrast-color($color-fivehundredpx, $color-light--default, $color-dark--default);
+$color-vk: #4a76a8;
+$color-vk-contrast: choose-contrast-color($color-vk, $color-light--default, $color-dark--default);
+$color-listlyorange: #df6d46;
+$color-listlyorange-contrast: choose-contrast-color($color-listlyorange, $color-light--default, $color-dark--default);
+$color-listlyblue: #52b1b3;
+$color-listlyblue-contrast: choose-contrast-color($color-listlyblue, $color-light--default, $color-dark--default);
+$color-vine: #00b489;
+$color-vine-contrast: choose-contrast-color($color-vine, $color-light--default, $color-dark--default);
+$color-steam: #171a21;
+$color-steam-contrast: choose-contrast-color($color-steam, $color-light--default, $color-dark--default);
+$color-discord: #7289da;
+$color-discord-contrast: choose-contrast-color($color-discord, $color-light--default, $color-dark--default);
+$color-telegram: #0088cc;
+$color-telegram-contrast: choose-contrast-color($color-telegram, $color-light--default, $color-dark--default);
+$color-clarity: #61bed9;
+$color-clarity-contrast: choose-contrast-color($color-clarity, $color-light--default, $color-dark--default);
+$color-homeadvisor: #f89000;
+$color-homeadvisor-contrast: choose-contrast-color($color-homeadvisor, $color-light--default, $color-dark--default);
+$color-houzz: #4dbc15;
+$color-houzz-contrast: choose-contrast-color($color-houzz, $color-light--default, $color-dark--default);
+$color-angieslist: #29a036;
+$color-angieslist-contrast: choose-contrast-color($color-angieslist, $color-light--default, $color-dark--default);
+$color-glassdoor: #0caa41;
+$color-glassdoor-contrast: choose-contrast-color($color-glassdoor, $color-light--default, $color-dark--default);

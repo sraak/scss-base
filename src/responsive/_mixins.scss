@@ -1,0 +1,17 @@
+@import './vars';
+
+
+@mixin bp($class) {
+  @if $class == nth($bp-names, 1) {
+    @media (max-width: nth($bp-values, 2) - 1px) { @content; }
+  }
+
+  @for $i from 2 through length($bp-names) {
+    $bpn: nth($bp-names, $i);
+    $bps: nth($bp-values, $i);
+
+    @if $class == $bpn {
+      @media (min-width: $bps) { @content; }
+    }
+  }
+}

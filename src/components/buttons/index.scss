@@ -1,0 +1,147 @@
+@import "../../colors/index";
+
+@mixin make-button-regular($color, $contrast) {
+  background-color: $color;
+  border-color: $color;
+  color: $contrast;
+
+  &:not(:disabled, .disabled) {
+    &:hover {
+      background-color: mix($color, $color-black, 90%);
+      border-color: mix($color, $color-black, 90%);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+.button {
+  // Common properties
+  appearance: none;
+  border: transparent 1px solid;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+  vertical-align: middle;
+
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  // Default Style
+  @include make-button-regular($color-light, $color-light--default);
+
+  @each $name, $color in $color-variations {
+    &--#{"" + $name} {
+      @include make-button-regular($color, choose-contrast-color($color, $color-light--default, $color-dark--default));
+    }
+  }
+
+  &--plain {
+    &.button {
+      @each $name, $color in $color-variations {
+        &--#{"" + $name} {
+          background-color: mix($color, transparent, 20%);
+          color: $color;
+
+          &:hover {
+            background-color: $color;
+            color: choose-contrast-color($color, $color-light--default, $color-dark--default);
+          }
+        }
+      }
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+
+    &.button {
+      @each $name, $color in $color-variations {
+        &--#{"" + $name} {
+          color: $color;
+
+          &:hover {
+            color: choose-contrast-color($color, $color-light--default, $color-dark--default);
+          }
+        }
+      }
+    }
+  }
+
+  &--shadow {
+    &.button {
+      @each $name, $color in $color-variations {
+        &--#{"" + $name} {
+          &:hover {
+            box-shadow: 0 0.5rem 1rem -0.5rem transparentize($color, 0);
+          }
+        }
+      }
+    }
+  }
+
+  &--rounded {
+    border-radius: 1rem;
+
+    &.button {
+      &--xs {
+        border-radius: 0.5rem;
+      }
+
+      &--sm {
+        border-radius: 0.75rem;
+      }
+
+      &--lg {
+        border-radius: 1.25rem;
+      }
+
+      &--xl {
+        border-radius: 1.5rem;
+      }
+
+      &--zl {
+        border-radius: 2rem;
+      }
+    }
+  }
+
+  // Sizes
+  &--xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  &--sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0 0.75rem;
+  }
+
+  &--lg {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0 1.25rem;
+  }
+
+  &--xl {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  &--zl {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    padding: 0 2rem;
+  }
+}

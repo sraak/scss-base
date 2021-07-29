@@ -1,0 +1,7 @@
+.bg {
+  @each $name, $color in $color-variations {
+    &--#{"" + $name} {
+      background-color: $color !important;
+    }
+  }
+}

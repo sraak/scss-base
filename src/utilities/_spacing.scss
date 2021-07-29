@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+@import "./vars";
+@import "../responsive/mixins";
+
+@mixin make-spacing($base, $properties) {
+  #{$base} {
+    @for $i from 1 through length($spacing-values) {
+      $val: nth($spacing-values, $i);
+
+      &-#{$i} {
+        @each $property in $properties {
+          #{$property}: $val !important;
+        }
+      }
+
+      @each $bpn in $bp-names {
+        &-#{$bpn}-#{$i} {
+          @include bp($bpn) {
+            @each $property in $properties {
+              #{$property}: $val !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-shadow($base) {
+  #{$base} {
+    @for $i from 1 through length($spacing-values) {
+      $val: nth($spacing-values, $i);
+
+      &-#{$i} {
+        box-shadow: 0 math.div($val, 2) $val $shadow-color;
+      }
+
+      @each $bpn in $bp-names {
+        &-#{$bpn}-#{$i} {
+          @include bp($bpn) {
+            box-shadow: 0 math.div($val, 2) $val $shadow-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include make-spacing(".p", padding);
+@include make-spacing(".px", (padding-left, padding-right));
+@include make-spacing(".py", (padding-top, padding-bottom));
+@include make-spacing(".pt", padding-top);
+@include make-spacing(".pr", padding-right);
+@include make-spacing(".pb", padding-bottom);
+@include make-spacing(".pl", padding-left);
+
+@include make-spacing(".m", margin);
+@include make-spacing(".mx", (margin-left, margin-right));
+@include make-spacing(".my", (margin-top, margin-bottom));
+@include make-spacing(".mt", margin-top);
+@include make-spacing(".mr", margin-right);
+@include make-spacing(".mb", margin-bottom);
+@include make-spacing(".ml", margin-left);
+
+@include make-spacing(".br", border-radius);
+
+@include make-shadow(".bsh");

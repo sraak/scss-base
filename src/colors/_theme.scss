@@ -1,0 +1,25 @@
+@import './functions';
+
+// Theme colours
+$color-light: #eee !default;
+$color-dark: #111 !default;
+
+$color-white: #fff !default;
+$color-black: #000 !default;
+
+$color-light--default: #555 !default;
+$color-dark--default: #eee !default;
+
+$color-primary: #7C4DFF !default;
+$color-primary-contrast: $color-dark--default !default;
+$color-secondary: #b0bec5 !default;
+$color-secondary-contrast: $color-black !default;
+$color-info: #2196f3 !default;
+$color-info-contrast: $color-dark--default !default;
+
+$color-danger: #e53935 !default;
+$color-danger-contrast: $color-dark--default !default;
+$color-warning: #ffc107 !default;
+$color-warning-contrast: $color-dark--default !default;
+$color-success: #43a047 !default;
+$color-success-contrast: $color-dark--default !default;

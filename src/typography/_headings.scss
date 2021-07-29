@@ -1,0 +1,25 @@
+@import './vars';
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $head--color;
+  font-family: $font-family--title;
+  font-weight: $head--font-weight;
+  line-height: $head--line-height;
+  margin-bottom: $head--margin-bottom;
+}
+
+@for $i from 1 through 6 {
+  h#{$i}, .h#{$i} {
+    font-size: (7-$i) * $head--font-size--increment + $head--font-size--base;
+
+    &.lg {
+      font-size: (7-$i) * $head--font-size--increment + $head--font-size--base * $head--font-size--lg-factor;
+      font-weight: $head--font-weight--lg;
+    }
+
+    &.sm {
+      font-size: (7-$i) * $head--font-size--increment + $head--font-size--base * $head--font-size--sm-factor;
+      font-weight: $head--font-weight--sm;
+    }
+  }
+}

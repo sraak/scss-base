@@ -1,0 +1,18 @@
+@import './theme';
+@import './social';
+
+$color-variations: (
+  light: $color-light,
+  dark: $color-dark,
+  white: $color-white,
+  black: $color-black,
+  primary: $color-primary,
+  secondary: $color-secondary,
+  info: $color-info,
+  danger: $color-danger,
+  warning: $color-warning,
+  success: $color-success,
+  facebook: $color-facebook,
+  google: $color-googlered,
+  twitter: $color-twitter,
+) !default;

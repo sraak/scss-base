@@ -1,0 +1,17 @@
+@import './vars';
+
+del, s {
+  text-decoration: line-through;
+}
+
+ins, u {
+  text-decoration: underline;
+}
+
+strong, b {
+  font-weight: $font-weight--bold;
+}
+
+em, i {
+  font-style: italic;
+}

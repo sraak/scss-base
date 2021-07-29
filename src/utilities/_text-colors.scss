@@ -1,0 +1,23 @@
+@import '../colors/variations';
+
+.text {
+  @each $name, $color in $color-variations {
+    &--#{"" + $name} {
+      color: $color !important;
+    }
+  }
+}
+
+.link {
+  @each $name, $color in $color-variations {
+    &--#{"" + $name} {
+      &, &:visited {
+        color: $color;
+
+        &:hover {
+          color: mix($color, $color-white, 80%);
+        }
+      }
+    }
+  }
+}

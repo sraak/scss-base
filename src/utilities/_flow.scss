@@ -1,0 +1,28 @@
+@import "./vars";
+@import "../responsive/mixins";
+
+.flow {
+  @for $i from 1 through length($spacing-values) {
+    $val: nth($spacing-values, $i);
+
+    &-#{$i} {
+      & > * {
+        &:not(:first-child) {
+          margin-top: $val;
+        }
+      }
+    }
+
+    @each $bpn in $bp-names {
+      &-#{$bpn}-#{$i} {
+        @include bp($bpn) {
+          & > * {
+            &:not(:first-child) {
+              margin-top: $val;
+            }
+          }
+        }
+      }
+    }
+  }
+}
