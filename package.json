@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sraak/scss-base.git"
+    "url": "https://github.com/sraak/scss-base.git"
   },
   "keywords": [
     "scss"
@@ -21,5 +21,6 @@
   "homepage": "https://github.com/sraak/scss-base#readme",
   "dependencies": {
     "sass": "^1.36.0"
-  }
+  },
+  "devDependencies": {}
 }
