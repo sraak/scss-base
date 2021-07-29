@@ -1,0 +1,25 @@
+{
+  "name": "@sraak/scss-base",
+  "version": "0.0.1",
+  "description": "Base for SCSS based styling.",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass -s compressed ./src/main.scss build/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sraak/scss-base.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": "Sattvik Chakravarthy <sattvik@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sraak/scss-base/issues"
+  },
+  "homepage": "https://github.com/sraak/scss-base#readme",
+  "dependencies": {
+    "sass": "^1.36.0"
+  }
+}
